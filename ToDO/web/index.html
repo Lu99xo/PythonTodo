@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@800&family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+      eel.expose(say_hello_js); // Expose this function to Python
+      function say_hello_js(x) {
+        console.log("Hello from " + x);
+      }
+
+      say_hello_js("Javascript World!");
+      eel.say_hello_py("Javascript World!"); // Call a Python function
+    </script>
+  </head>
+
+  <body>
+    <div class="bg">
+      <h1 id="myele"> My TO DO list today </h1>
+      <input type="text" id="taskInp">
+      <div class="btns">
+        <button id="mybtn" class="btn">Add Task</button>
+        <button id="sendbtn" class="btn">remove Task</button>
+        
+        <div id="tasks"> 
+          <p>no tasks<p>
+        </div>
+      </div>
+
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
